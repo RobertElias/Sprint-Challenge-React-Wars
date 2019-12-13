@@ -24,8 +24,13 @@ const App = () => {
     <div className="App">
       <h1 className="Header">React Wars</h1>
       <div className="entry">
+
+      {data.map(data => {
+
+        
+      })
       <PersonCard 
-      data={data}
+
       name={data.name}
       height={data.height}
       gender={data.gender}
