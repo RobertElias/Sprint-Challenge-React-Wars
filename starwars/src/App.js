@@ -23,7 +23,7 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Header">React Wars</h1>
-      
+      <div className="entry">
       <PersonCard 
       data={data}
       name={data.name}
@@ -31,6 +31,8 @@ const App = () => {
       gender={data.gender}
       created={data.created}
       />
+      </div>
+      
       
     </div>
   );
