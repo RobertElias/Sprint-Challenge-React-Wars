@@ -1,5 +1,7 @@
-import React from 'react';
 import './App.css';
+
+import Axios from 'axios';
+import React from 'react';
 
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
@@ -8,6 +10,22 @@ const App = () => {
   // Fetch characters from the star wars api in an effect hook. Remember, anytime you have a 
   // side effect in a component, you want to think about which state and/or props it should
   // sync up with, if any.
+
+const [data, setData] = useState([]);
+useEffect(()=> {
+  axios.get('https://swapi.co/api/people/')
+  
+  .then(response => {
+   
+ 
+    
+    console.log(response.data.results)
+    //console.log(response.data)
+  })
+  .catch(error =>{
+    console.log("There is an error in the Axios call: ", error)
+  })
+},[]);
 
   return (
     <div className="App">
