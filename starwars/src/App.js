@@ -2,6 +2,7 @@ import './App.css';
 
 import React, {useEffect, useState} from "react";
 
+import { Container } from "reactstrap";
 import PersonCard from './components/Person';
 import axios from 'axios';
 
@@ -22,23 +23,26 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1 className="Header">React Wars</h1>
+    <Container>
+
+     <h1 className="Header">React Wars</h1>
+      
       <div className="entry">
-
       {data.map(data => {
+        return (
+          <PersonCard
+            
+            name={data.name}
+            height={data.height}
+            gender={data.gender}
+            created={data.created}
 
-        
-      })
-      <PersonCard 
-
-      name={data.name}
-      height={data.height}
-      gender={data.gender}
-      created={data.created}
-      />
+          />
+        );
+      })}
       </div>
-      
-      
+    </Container>
+     
     </div>
   );
 }
