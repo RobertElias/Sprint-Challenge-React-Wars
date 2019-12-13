@@ -1,8 +1,51 @@
 .App {
+  display: flex;
   text-align: center;
+  justify-content: Center;
 }
 .Header {
   color: #443e3e;
   text-shadow: 1px 1px 5px #fff;
 }
+
+.container{
+  
+  /* border: 1px solid green; */
+  display: inline;
+  /* justify-content: center; */
+  align-content: left;
+  align-items: left;
+}
+
 /* write your parent styles in here for your App.js */
+.Card{
+  margin-left: 300px;
+  border: 1px solid rgb(144, 133, 133);
+  display: flex;
+  width: 500px;
+  justify-content: left;
+}
+
+.card-body{
+  font-family: sans-serif;
+  color: #0f0f0f;
+  text-shadow: 1px 1px 5px rgb(114, 111, 111);
+  font-size: 1em;
+  /* background-color: rgba(187, 185, 185, 0.787); */
+  background-image: url('./sw-bg.jpg');
+  background-size: cover;
+  display: inline-block;
+  align-content: left;
+  align-items: flex-start;
+}
+
+.entry{
+  /* border: 1px solid red; */
+  text-align: left;
+  justify-content: center;
+  align-content: left;
+  align-items: left;
+  display: inline;
+  
+ 
+}
