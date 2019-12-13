@@ -5,33 +5,38 @@ import {
     CardSubtitle,
     CardTitle,
 } from "reactstrap";
-import React, { Component } from 'react'
+import React, {useEffect, useState} from "react";
 
 import axios from "axios"
 
-const PersonCard = props =>{
-
+const PersonCard = props => {
 const [item, setItem] = useState([]);
-
 useEffect(()=> {
-    
-})
-    
-        return (
-            
-            <Card className="Card">
+  
+  axios.get(`${props}`)
+  .then(response => {
+    setItem(response.data.results)
+    console.log(response.data.results)
+    //console.log(response.data)
+  })
+  .catch(error =>{
+    console.log("There is an error in the Axios call: ", error)
+  })
+},[]);
 
-            <CardBody className="card-body">
-            <CardSubtitle>Name: {props.data.name}</CardSubtitle>
-            <CardSubtitle>Height: {props.data.height}</CardSubtitle>
-            <CardSubtitle>Gender: {props.data.gender}</CardSubtitle>
-            <CardSubtitle>Created: {props.data.created}</CardSubtitle>
-            </CardBody>
-           
-            </Card>
 
-        )
-    
-}
+console.log(props);
+    return (
+      <Card className="Card">
+        <CardBody className="card-body">
+        <CardSubtitle>Name: {props.name}</CardSubtitle><br></br>
+        <CardSubtitle>Height: {props.height} inches</CardSubtitle><br></br>
+        <CardSubtitle>Gender: {props.gender}</CardSubtitle><br></br>
+        <CardSubtitle>created: {props.created}</CardSubtitle>
+        
+        </CardBody>
+      </Card>
+    );
+};
 
-export default PersonCard
+  export default PersonCard;
