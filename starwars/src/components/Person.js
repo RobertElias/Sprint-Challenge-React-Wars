@@ -9,7 +9,13 @@ import React, { Component } from 'react'
 
 import axios from "axios"
 
-const PersonCard =(props) =>{
+const PersonCard = props =>{
+
+const [item, setItem] = useState([]);
+
+useEffect(()=> {
+    
+})
     
         return (
             
@@ -23,8 +29,7 @@ const PersonCard =(props) =>{
             </CardBody>
            
             </Card>
-          
-           
+
         )
     
 }
