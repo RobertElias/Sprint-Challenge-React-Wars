@@ -12,14 +12,18 @@ import axios from "axios"
 const PersonCard =(props) =>{
     
         return (
-            <>
-            <div>
-            <p>Name: {props.name}</p>
-            <p>Height: {props.height}</p>
-            <p>Gender: {props.gender}</p>
-            <p>Created: {props.created}</p>
-            </div>
-            </>
+            
+            <Card className="Card">
+
+            <CardBody className="card-body">
+            <CardSubtitle>Name: {props.data.name}</CardSubtitle>
+            <CardSubtitle>Height: {props.data.height}</CardSubtitle>
+            <CardSubtitle>Gender: {props.data.gender}</CardSubtitle>
+            <CardSubtitle>Created: {props.data.created}</CardSubtitle>
+            </CardBody>
+           
+            </Card>
+          
            
         )
     

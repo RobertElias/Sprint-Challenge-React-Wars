@@ -32,6 +32,7 @@ const App = () => {
       <h1 className="Header">React Wars</h1>
       
       <PersonCard 
+      data={data}
       name={data.name}
       height={data.height}
       gender={data.gender}
